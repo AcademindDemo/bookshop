@@ -1,6 +1,9 @@
 const cards = new Map();
 
 export function issueGiftCard(code, amount) {
+  if (cards.has(code)) {
+    throw new Error(`Gift card ${code} already exists`);
+  }
   cards.set(code, amount);
   return { code, balance: amount };
 }
