@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r .tool_input.command | sed -n 's/^\\*\\*\\* [AU][a-z]* File: //p' | while read -r f; do { npm run -s format -- \"$f\" && npm run -s lint -- \"$f\"; } >&2 || exit 2; done"
+          }
+        ]
+      }
+    ]
+  }
+}
