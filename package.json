@@ -1,1 +1,13 @@
-{"name":"bookshop","private":true,"type":"module","scripts":{"test":"node --test"}}
+{
+  "name": "bookshop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "format": "biome format --write --no-errors-on-unmatched",
+    "lint": "biome lint --no-errors-on-unmatched"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.6"
+  }
+}
