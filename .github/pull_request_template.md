@@ -1,13 +1,11 @@
-## Acceptance criteria
+## Testing
 
-| Criterion | Proof |
-| --- | --- |
-|  |  |
+<!-- What you ran and what it showed: `npm run lint`, `npm test`, each new test seen failing first. -->
 
-## Gate
+## Risk
 
-`npm test`: passed, failed, Node version, environment.
+<!-- What this change could break, and what you did not check. -->
 
-## Tests seen failing
+## How to revert
 
-## Not checked
+<!-- How to undo this change, and anything a revert leaves behind. -->
